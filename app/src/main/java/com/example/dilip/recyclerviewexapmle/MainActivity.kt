@@ -17,20 +17,20 @@ class MainActivity : AppCompatActivity() {
         var recyclerView = findViewById(R.id.recycleview) as RecyclerView
         var layoutManager = LinearLayoutManager(this)
 
-        recyclerView.layoutManager = LinearLayoutManager(this,LinearLayout.VERTICAL,false)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
 
         var userList = ArrayList<User>()
 
-        userList.add(User(R.mipmap.ic_launcher,"Dilip kumar",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Ashish kumar Gupta",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Aryan kumar",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Shobhit kumar",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Yuvraj kumar",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Ram Gupta",8897963698))
-        userList.add(User(R.mipmap.ic_launcher,"Dilip kumar",87493009384))
-        userList.add(User(R.mipmap.ic_launcher,"Raj Pratap kumar",8873458728))
+        userList.add(User(R.mipmap.ic_launcher, "Dilip kumar", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Ashish kumar Gupta", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Aryan kumar", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Shobhit kumar", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Yuvraj kumar", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Ram Gupta", 8897963698))
+        userList.add(User(R.mipmap.ic_launcher, "Dilip kumar", 87493009384))
+        userList.add(User(R.mipmap.ic_launcher, "Raj Pratap kumar", 8873458728))
 
-        recyclerView.adapter = MyCustomAdapter(this,userList)
+        recyclerView.adapter = MyCustomAdapter(this, userList)
 
     }
 }
