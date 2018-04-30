@@ -28,7 +28,7 @@ class MyCustomAdapter(context : Context,  userList : ArrayList<User>) : Recycler
     }
 
     override fun getItemCount(): Int {
-        return list.size;
+        return if (list != null) list.size else 0;
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
