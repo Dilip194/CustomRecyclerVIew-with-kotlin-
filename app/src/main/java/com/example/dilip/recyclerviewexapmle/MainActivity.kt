@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         userList.add(User(R.mipmap.ic_launcher, "Dilip kumar", 87493009384))
         userList.add(User(R.mipmap.ic_launcher, "Raj Pratap kumar", 8873458728))
 
-        recyclerView.adapter = MyCustomAdapter(this, userList)
+        var adatpre  = MyCustomAdapter(this, userList)
+        recyclerView.adapter = adatpre;
 
     }
 }

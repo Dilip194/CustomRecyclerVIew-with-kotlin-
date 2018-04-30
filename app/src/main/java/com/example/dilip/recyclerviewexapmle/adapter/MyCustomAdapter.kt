@@ -7,13 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.example.dilip.recyclerviewexapmle.R
 import com.example.dilip.recyclerviewexapmle.model.User
 
 class MyCustomAdapter(context : Context,  userList : ArrayList<User>) : RecyclerView.Adapter<MyCustomAdapter.CustomViewHolder>() {
 
     private var list : ArrayList<User>;
-    private var mContext : Context;
+    public var mContext : Context;
 
     init {
         list = userList;
@@ -45,6 +46,10 @@ class MyCustomAdapter(context : Context,  userList : ArrayList<User>) : Recycler
             image.setImageResource(user.image);
             name.setText(user.name)
             contact.setText(""+user.mobile)
+
+            itemView.setOnClickListener(View.OnClickListener {
+                Toast.makeText(itemView.context,"You selected "+user.name,Toast.LENGTH_LONG).show()
+            })
         }
     }
 }
